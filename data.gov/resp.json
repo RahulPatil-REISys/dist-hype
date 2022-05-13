@@ -1,0 +1,14 @@
+{
+    "title": "Property Information",
+    "description": "City of Baton Rouge — This dataset is a combination of attribute information from the master address table and the lot or property records table. The address points are created within a...",
+    "organizationType": "City",
+    "files": [
+        {
+            "type":"pdf",
+            "path":"http://localhost:8082/download",
+            "name":"response.pdf",
+            "fileHex": "",
+            "txId": ""
+        }
+    ]
+}

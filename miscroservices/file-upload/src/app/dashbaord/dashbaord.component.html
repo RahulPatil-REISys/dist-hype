@@ -1,0 +1,61 @@
+
+<div class="wrapper">
+    <div class="page-header">
+        <div class="container" style="z-index: 1;">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3>Transactions</h3>
+                    <hr>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col">Txn Hash</th>
+                                <th scope="col">Method</th>
+                                <th scope="col">Block</th>
+                                <th scope="col">Age</th>
+                                <th scope="col">From</th>
+                                <th scope="col">Metadata</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>
+                                   <span> {{transaction.filehex}} </span>
+                                </td>
+                                <td>File Uploaded</td>
+                                <td>1245000</td>
+                                <td>{{transaction.uploadedate | dateAgo}}</td>
+                                <td>{{transaction.userpublickey}}</td>
+                                <td>Uploaded by Data.gov</td>
+                            </tr>
+                            <!-- <tr>
+                                <th scope="row">2</th>
+                                <td>
+                                    0xb654aeb531ee803e51fbc70a2b080949...
+                                </td>
+                                <td>File Uploaded</td>
+                                <td>1245000</td>
+                                <td>10min ago</td>
+                                <td>data.gov</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>
+                                    0xb654aeb531ee803e51fbc70a2b080949...
+                                </td>
+                                <td>File Uploaded</td>
+                                <td>1245000</td>
+                                <td>10min ago</td>
+                                <td>data.gov</td>
+                            </tr> -->
+                        </tbody>
+                    </table>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

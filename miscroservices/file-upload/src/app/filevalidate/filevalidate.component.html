@@ -1,0 +1,18 @@
+<div class="wrapper">
+       <div class="page-header" style="background-image: url('./assets/img/upload-image.jpg');">
+              <div class="filter"></div>
+              <div class="container" style="z-index: 1;">
+                     <div class="row">
+                            <div class="col-md-12">
+                                   <input type="file" class="btn btn-outline-neutral btn-round" (change)="onFileSelected($event)" #fileUpload>
+                            </div>
+                            <div class="col-md-12" *ngIf="serverResponse" style="margin-top: 10px;border-radius: 10px;border: 1px solid #FFF;">
+                                   <p class="server-response">{{serverResponse.msg}}</p>
+                                   <p class="server-response" *ngIf="serverResponse.data">Name: {{serverResponse.data.filename}}</p>
+                                   <p class="server-response" *ngIf="serverResponse.data">Hash: {{serverResponse.data.filehex}}</p>
+                                   <p class="server-response" *ngIf="serverResponse.data">Public Key: {{serverResponse.data.userpublickey}}</p>
+                            </div>
+                     </div>
+              </div>
+       </div>
+</div>

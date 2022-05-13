@@ -1,0 +1,21 @@
+<h2 class="title">
+    <img src="/assets/img/logo.png" style="background-color: #FFF;padding: 10px;" alt="">
+</h2>
+<div class="login-content">
+    
+    <div id="bg"></div>
+    <form [formGroup]="loginForm">
+        <div class="form-field">
+            <input type="email" placeholder="Username" formControlName="username" required/>
+        </div>
+        
+        <div class="form-field"> 
+            <input type="password" placeholder="Password" formControlName="password" required/>
+        </div>
+        
+        <div class="form-field">
+            <button class="btn" [disabled]="!loginForm.valid" (click)="login()">Log in</button>
+        </div>
+    </form>
+
+</div>

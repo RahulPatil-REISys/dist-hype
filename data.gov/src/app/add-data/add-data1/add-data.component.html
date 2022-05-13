@@ -1,0 +1,27 @@
+<div class="grid-container">
+    <div class="grid-row" style="margin-top: 10px;">
+        <div class="tablet:grid-col-3"></div>
+        <div class="tablet:grid-col-6">
+            <label class="usa-label" for="input-type-text">Title</label>
+            <input class="usa-input" id="input-type-text" name="input-type-text" [(ngModel)]="fileObj.title"/>
+            <label class="usa-label" for="input-type-text">Description</label>
+            <textarea class="usa-textarea" id="input-type-textarea" name="input-type-textarea" [(ngModel)]="fileObj.description"></textarea>
+            <label class="usa-label" for="input-type-text">Organization Type</label>
+            <input class="usa-input" id="input-type-text" name="input-type-text" [(ngModel)]="fileObj.organizationType"/>
+            <div class="usa-form-group">
+                <label class="usa-label" for="file-input-single">Select File:</label>
+                <input
+                  id="file-input-single"
+                  class="usa-file-input"
+                  type="file"
+                  name="file-input-single"
+                  (change)="onFileSelected($event)" #fileUpload
+                />
+            </div>
+            <button class="usa-button" style="margin-top: 20px;margin-bottom: 30px;" (click)="add()" [disabled]="disabled()">Add</button>
+        </div>
+        <div class="tablet:grid-col-3"></div>
+    </div>
+</div>
+
+

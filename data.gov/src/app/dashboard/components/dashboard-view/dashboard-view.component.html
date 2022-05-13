@@ -1,0 +1,78 @@
+<div class="grid-container ">
+    <div class="grid-row display-flex flex-column flex-align-center">
+        <legend class="usa-legend margin-y-205">{{documents.length}} datasets found for "Search datasets..."
+        </legend>
+
+        <ul class="dataset-list unstyled">
+            <li class="dataset-item has-organization" *ngFor="let doc of documents">
+                <div class="dataset-content">
+                <div class="organization-type-wrap">
+                    <span class="organization-type" title="Federal Government" data-organization-type="fedral">
+                        <span>{{doc.organizationType}}</span>
+                    </span>
+                </div>
+                <h3 class="dataset-heading">
+                    <a href="/history?0xf28aeba929dba7e91335477b3">{{doc.title}}</a>
+                </h3>
+                <div class="notes">
+                  <!-- <p class="dataset-organization">Department of the Interior —</p> -->
+                  <div>{{doc.description}}</div>
+                </div>
+                <ul class="dataset-resources unstyled">
+                      <!-- <li>
+                        <a href="https://pubs.usgs.gov/of/2014/1040/data/undersea_features.zip" class="label label-default" data-format="zip" target="_blank" data-organization="Department of the Interior">ZIP</a>
+                    </li>
+                      <li>
+                        <a href="https://pubs.usgs.gov/of/2014/1040/data/undersea_features.zip" class="label label-default" data-format="zip" target="_blank" data-organization="Department of the Interior">ZIP</a>
+                    </li>
+                      <li>
+                          <a href="https://doi.org/10.3133/ofr20141040" class="label label-default" data-format="html" target="_blank" data-organization="Department of the Interior">HTML</a>
+                      </li>
+                      <li>
+                          <a href="https://pubs.usgs.gov/of/2014/1040/" class="label label-default" data-format="html" target="_blank" data-organization="Department of the Interior">HTML</a>
+                      </li> -->
+                      <li *ngFor="let file of doc.files">
+                          <!-- <a href="https://data.doi.gov/harvest/object/319062a7-b421-4fb0-82c6-f4244ac41c79" class="label label-default" data-format="xml" data-organization="Department of the Interior">XML</a> -->
+                          <a (click)="downloadFile(file)" class="label label-default" data-format="pdf" data-organization="Department of the Interior">{{file.type}}</a>
+                          <a href="http://localhost:4200/dashboard/{{file.fileHex}}" target="_blank" style="padding:10px">
+                            <img src="assets/img/info-circle.svg" alt="">
+                          </a>
+                      </li>
+                </ul>
+                </div>
+            </li>
+            <!-- <li class="dataset-item has-organization">
+                <div class="dataset-content">
+                    <div class="organization-type-wrap">
+                    <span class="organization-type" title="State Government" data-organization-type="state">
+                      <span>State</span>
+                    </span>
+                    </div>
+                  <h3 class="dataset-heading">
+                    <a href="/dataset/cpa-search">CPA Search</a>
+                  </h3>
+                  <div class="notes">
+                      <p class="dataset-organization">State of Washington —</p>
+                      <div>
+                          Board Orders prior to December 31, 2019 may not be accessible. If you need assistance, please contact us at (360) 753-2586 or <a href="mailto:customerservice@acb.wa.gov">customerservice@acb.wa.gov</a>. 2. As of...</div>
+                    </div>
+                  
+                    <ul class="dataset-resources unstyled">
+                          <li>
+                            <a href="https://data.wa.gov/api/views/6du3-3h9e/rows.csv?accessType=DOWNLOAD" class="label label-default" data-format="csv" data-organization="State of Washington">CSV</a>
+                          </li>
+                          <li>
+                            <a href="https://data.wa.gov/api/views/6du3-3h9e/rows.rdf?accessType=DOWNLOAD" class="label label-default" data-format="rdf" data-organization="State of Washington">RDF</a>
+                          <li>
+                            <a href="https://data.wa.gov/api/views/6du3-3h9e/rows.json?accessType=DOWNLOAD" class="label label-default" data-format="json" data-organization="State of Washington">JSON</a>
+                          <li>
+                            <a href="https://data.wa.gov/api/views/6du3-3h9e/rows.xml?accessType=DOWNLOAD" class="label label-default" data-format="xml" data-organization="State of Washington">XML</a>
+                    </ul>
+                </div>
+            </li> -->
+
+        </ul>
+
+
+    </div>
+</div>

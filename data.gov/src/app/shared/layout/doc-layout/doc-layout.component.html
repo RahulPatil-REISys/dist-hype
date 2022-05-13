@@ -1,0 +1,30 @@
+<div class="usa-section">
+    <div class="grid-container">
+        <div class="grid-row grid-gap">
+            <div class="desktop:grid-col-3">
+            </div>
+            <div class="desktop:grid-col-9">
+                <div class="grid-container">
+                    
+                    <usa-search
+                    [buttonText]="buttonText" 
+                    [size]="size"
+                    [placeholder]="placeholder"
+                    [id]="id"
+                    [ariaLabel]="ariaLabel"
+                    [name]="name"
+                    (searchTextChange)="searchTextChange($event)"
+                    (onBlur)="onBlur($event)">
+                </usa-search>
+            </div>
+        </div>
+        <div class="usa-layout-docs__sidenav desktop:grid-col-3">
+            
+        </div>
+        
+        <main class="usa-layout-docs__main desktop:grid-col-9 usa-prose usa-layout-docs" id="main-content"> 
+            <router-outlet></router-outlet>
+        </main>
+    </div>
+</div>
+</div>
